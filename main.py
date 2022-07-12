@@ -12,9 +12,10 @@
 #     Find the value of n, 1 < n < 107, for which φ(n) is a permutation of n and the ratio n/φ(n) produces a minimum.
 
 from collections import defaultdict
+from typing import Tuple
 
 
-def is_permutation(x, y):
+def is_permutation(x: int, y: int) -> bool:
     """
     Returns True iff `x` and `y` are permutations of each other's digits.
 
@@ -46,7 +47,7 @@ def is_permutation(x, y):
     return True
 
 
-def main(n):
+def main(n: int) -> Tuple[int, int, float]:
     """
     Returns the value of `x`,
       where 1 < x < `n`
